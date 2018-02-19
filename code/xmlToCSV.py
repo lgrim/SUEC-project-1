@@ -112,7 +112,7 @@ class xmlToCSV:
             if self.isRunningFile:
                 self.outputFile.write(heartRateValues[i] + ", " + speeds[i] + ", " + runCadences[i] + "\n" )
             else:
-                self.outputFile.write(heartRateValues[i] + ", " + speeds[i] + ", " + bikeCadences[i] + powers[i] + "\n")
+                self.outputFile.write(heartRateValues[i] + ", " + speeds[i] + ", " + bikeCadences[i] + ", " + powers[i] + "\n")
 
 ##########
 ## Test ##
