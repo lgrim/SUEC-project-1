@@ -11,16 +11,16 @@
 \maketitle
 
 % Main sections
-\section{Description} The goal of this project is to create a software package that will take xml files containing data from endurance/strength tests completed by athletes, and create a detailed report including but not limited to the athlete's training zones, graphical representations of the data, and analysis of the athlete's performance related to other athletes in that age group.
+\section*{Description} The goal of this project is to create a software package that will take xml files containing data from endurance/strength tests completed by athletes, and create a detailed report including but not limited to the athlete's training zones, graphical representations of the data, and analysis of the athlete's performance related to other athletes in that age group.
 
-\section{Initial Steps}
+\section*{Initial Steps}
 \begin{enumerate}
 	\item Create a git repository to share, track, and update the software package
 	\item Write the code that will transform the xml file into a csv file, where each column is an attribute. Each row should contain all attributes related to the given data object (a moment in time). 
 	\item Begin building the report template and explore using R in combination with python for data analysis and plotting.
 	\item ...?
 \end{enumerate}
-\section{Data Attributes by File Type} 
+\section*{Data Attributes by File Type} 
 \begin{enumerate}
 	\item[]\textbf{Running File}
 	\begin{enumerate}
@@ -35,6 +35,29 @@
 		\item Cadence
 		\item Heart Rate
 	\end{enumerate}
+\end{enumerate}
+\section*{Output File Structure - xmlToCSV.py} The output files are csv format. The column layout for each individual file type is given below:
+\begin{enumerate}
+	\item[]\textbf{Running File:} \\
+		Heart Rate BPM, Speed, Run Cadence
+	\item[]\textbf{Biking File} \\
+		Heart Rate BPM, Speed, Bike Cadence, Power
+\end{enumerate}
+
+\section*{Report Template Structure}
+This defines the general structure of our report template, including component functions, the tasks they complete, and the overall template structure.
+\begin{enumerate}
+	\item[]\textbf{Title and Header Information}
+		\begin{enumerate}
+			\item Report Title
+			\item Athlete Name
+			\item Date
+			\item ??
+		\end{enumerate}
+	\item[]\textbf{First Subsection}
+		\begin{enumerate}
+			\item ??
+		\end{enumerate}
 \end{enumerate}
 
 \end{document}

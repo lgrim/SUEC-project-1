@@ -43,7 +43,7 @@ class xmlToCSV:
         xmlInfo = minidom.parse(self.inputFile)
 
         # Heart Rate Tags
-        # Note these contain sub tags named "value"
+        # Note these contain sub tags named "Value"
         heartRateBPMs = xmlInfo.getElementsByTagName('HeartRateBpm')
 
         # Grab the numerical Heart Rate values and put them in a list

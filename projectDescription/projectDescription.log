@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 FEB 2018 19:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 FEB 2018 10:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -50,20 +50,20 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./
 projectDescription.aux) ) 
 Here is how much of TeX's memory you used:
- 229 strings out of 493014
- 2563 string characters out of 6133351
+ 228 strings out of 493014
+ 2557 string characters out of 6133351
  56601 words of memory out of 5000000
- 3847 multiletter control sequences out of 15000+600000
+ 3846 multiletter control sequences out of 15000+600000
  7588 words of font info for 27 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 23i,6n,17p,429b,250s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23i,6n,17p,430b,252s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmr17.pfb>
-Output written on projectDescription.pdf (2 pages, 64784 bytes).
+Output written on projectDescription.pdf (2 pages, 70267 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  21 compressed objects within 1 object stream
