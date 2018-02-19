@@ -74,7 +74,7 @@ class xmlToCSV:
                 runCadences.append(tag.firstChild.nodeValue)
 
         # Only grab this data if it is a biking file
-        if not self.isRunningFile:
+        else:
 
             # Bike Cadence Tags
             bikeCadenceTags = xmlInfo.getElementsByTagName("Cadence")
@@ -108,6 +108,7 @@ class xmlToCSV:
         else:
             numberOfObjects = min(len(heartRateValues), len(speeds), len(bikeCadences), len(powers))
 
+        # Write to the output file
         for i in range(numberOfObjects):
             if self.isRunningFile:
                 self.outputFile.write(heartRateValues[i] + ", " + speeds[i] + ", " + runCadences[i] + "\n" )
