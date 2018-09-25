@@ -1,13 +1,29 @@
+##############################
+## Copyright 2018 ############
+## Logan Grim & Steve Moors ##
+##############################
+
 from LoadData import LoadData
 from StatisticsAndPlots import StatisticsAndPlots
 
 class GenerateReport():
     def __init__(self):
-        """Generate Automated Running and Biking Reports"""
+        """ Generate Automated Running and Biking Reports.
+            Creates the .tex file that is compiled into the pdf report."""
         self.number_of_files_created = 0
 
     # date here is not the latex bit, it should be a string for filenames
     def generate_report(self, input_file_name, output_file_name, athlete_name, is_running_file, date):
+        """
+        :param input_file_name: Name of the csv file containing data
+        :param output_file_name: Name of the tex file that is generated
+        :param athlete_name: Name of the athlete separated by an underscore
+        :param is_running_file: Boolean, either true or false
+        :param date: The date associated with the file in format 'yyyy_mm_dd'
+        :return: Nothing
+
+        Generate the tex file that will later be compiled into a pdf.
+        """
         data = LoadData().load_csv(input_file_name)
         stats = StatisticsAndPlots()
         self.build_tex(output_file_name, athlete_name, is_running_file, ("%.2f" % stats.get_average_speed(data)),
@@ -23,7 +39,22 @@ class GenerateReport():
                    raw_hist_file_name, zone_hist_file_name,
                    raw_plot_file_name,
                    date="\\today"):
-        """Build the report, piece-by-piece"""
+        """
+        :param output_file_name: Name of the tex file that is generated
+        :param athlete_name: Name of the athlete separated by an underscore
+        :param is_running_file: Boolean, either true or false
+        :param avg_speed: Average speed over the course of the entire file
+        :param avg_heart_rate: Average heart rate over the course of the entire file
+        :param avg_cadence: Average cadence over the course of the entire file
+        :param avg_power: Average power over the course of the entire file
+        :param raw_hist_file_name: Name of the raw data histogram file
+        :param zone_hist_file_name: Name of the zone histogram file
+        :param raw_plot_file_name: Name of the time-series plot file
+        :param date: The date associated with the file in format 'yyyy_mm_dd'
+        :return: Nothing. Just writes a file.
+
+        Build the tex file and write it.
+        """
         output_file = open(output_file_name, "w")
         output_file.write(self.doc_class_and_packages())
         output_file.write(self.title_string(is_running_file))
@@ -64,7 +95,12 @@ class GenerateReport():
         output_file.close()
 
     def title_string(self, is_running_file):
-        """Build the title of the report"""
+        """
+        :param is_running_file: Boolean, either true or false
+        :return: The Title string of the pdf report
+
+        Build the title of the report
+        """
         return "\\title{Summit Ultra Endurance Coaching\\\\\n" \
                  + ("Run Outline}\n" if is_running_file else "Bike Outline}\n")
 

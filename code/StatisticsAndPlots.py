@@ -1,10 +1,15 @@
+##############################
+## Copyright 2018 ############
+## Logan Grim & Steve Moors ##
+##############################
+
 import numpy as np
 from matplotlib import pyplot
-
 
 class StatisticsAndPlots():
 
     def __init__(self):
+        """ Class for generating specific plots for the report."""
         pass
 
     def get_average_heart_rate(self, data):
@@ -17,6 +22,7 @@ class StatisticsAndPlots():
         return np.average(data[:,2])
 
     def get_average_power(self, data, is_running_file):
+        # Power does not pertain to running files
         if is_running_file:
             return
         return np.average(data[:,3])
